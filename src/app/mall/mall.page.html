@@ -1,0 +1,196 @@
+<ion-header class="header_bg bg-transparent">
+	<div class="search_box d-flex">
+		<div class="icon_box">
+			<img src="assets/imgs/ic_search.png">
+		</div>
+		<ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'search_text' | translate}}"></ion-searchbar>
+		<div class="icon_box end">
+			<img src="assets/imgs/ic_cart.png">
+			<ion-badge>2</ion-badge>
+		</div>
+	</div>
+	<ion-list no-lines>
+		<h2>{{'shop_by_categories' | translate}}</h2>
+		<ion-item>
+			<ion-row>
+				<ion-col size="3" class="ion-text-center" (click)="categories()">
+					<div class="img_box center_img">
+						<img src="assets/imgs/01.png" class="crop_img">
+					</div>
+					<p>{{'fashion' | translate}}</p>
+				</ion-col>
+				<ion-col size="3" class="ion-text-center" (click)="categories()">
+					<div class="img_box center_img">
+						<img src="assets/imgs/02.png" class="crop_img">
+					</div>
+					<p>{{'electronics' | translate}}</p>
+				</ion-col>
+				<ion-col size="3" class="ion-text-center" (click)="categories()">
+					<div class="img_box center_img">
+						<img src="assets/imgs/03.png" class="crop_img">
+					</div>
+					<p>{{'phones' | translate}}</p>
+				</ion-col>
+				<ion-col size="3" class="ion-text-center" (click)="categories()">
+					<div class="img_box center_img">
+						<img src="assets/imgs/04.png" class="crop_img">
+					</div>
+					<p>{{'devices' | translate}}</p>
+				</ion-col>
+				<ion-col size="3" class="ion-text-center" (click)="categories()">
+					<div class="img_box center_img">
+						<img src="assets/imgs/05.png" class="crop_img">
+					</div>
+					<p>{{'appliances' | translate}}</p>
+				</ion-col>
+				<ion-col size="3" class="ion-text-center" (click)="categories()">
+					<div class="img_box center_img">
+						<img src="assets/imgs/c6.png" class="crop_img">
+					</div>
+					<p>{{'beauty' | translate}}</p>
+				</ion-col>
+				<ion-col size="3" class="ion-text-center" (click)="categories()">
+					<div class="img_box center_img">
+						<img src="assets/imgs/06.png" class="crop_img">
+					</div>
+					<p>{{'sports' | translate}}</p>
+				</ion-col>
+				<ion-col size="3" class="ion-text-center" (click)="categories()">
+					<div class="img_box center_img">
+						<img src="assets/imgs/07.png" class="crop_img">
+					</div>
+					<p>{{'more' | translate}}</p>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+	</ion-list>
+</ion-header>
+
+
+<ion-content>
+	<ion-list  lines="none" class="deals">
+		<h2>{{'deals_of_the_day' | translate}}</h2>
+		<div class="bg_img center_img">
+			<img src="assets/imgs/card_bg2.png" class="crop_img">
+		</div>
+		<div class="scroll_container">
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f1.png">
+					</div>
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f2.png">
+					</div>
+					<h2>Spyworn Blue cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f3.png">
+					</div>
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f4.png">
+					</div>
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f1.png">
+					</div>
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f4.png">
+					</div>
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+		</div>
+	</ion-list>
+
+	<ion-list  lines="none" class="deals">
+		<h2>{{'recently_viewed' | translate}}</h2>
+		<div class="bg_img center_img">
+			<img src="assets/imgs/card_bg2.png" class="crop_img">
+		</div>
+		<div class="scroll_container">
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f3.png">
+					</div> 
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f4.png">
+					</div>
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f1.png">
+					</div>
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f4.png">
+					</div>
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f1.png">
+					</div>
+					<h2>Spyworn white cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+			<div class="item_box" (click)="item_info()">
+				<div class="item-box">
+					<div class="img_box">
+						<img src="assets/imgs/f2.png">
+					</div>
+					<h2>Spyworn Blue cotton shirt Xl</h2>
+					<p>$9.99</p>
+				</div>
+			</div>
+		</div>
+	</ion-list>
+</ion-content>

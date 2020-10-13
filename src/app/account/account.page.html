@@ -1,0 +1,62 @@
+<ion-header class="header_bg bg-transparent">
+	<ion-toolbar>
+		<ion-title>{{'account' | translate}}</ion-title>
+	</ion-toolbar>
+	<div class="profile_box d-flex" (click)="myprofile()">
+		<div class="profile_img">
+			<img src="assets/imgs/profile_pic.png">
+		</div>
+		<div class="name_box">
+			<h2>Sam Smith</h2>
+			<h3>{{'view_profile' | translate}}</h3>
+		</div>
+	</div>
+</ion-header>
+<ion-content fullscreen>
+	<div class="buy_this_app" *ngIf="config.showBuyPromt" (click)="buyAppAction()">
+		<h2>
+			<ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>
+			{{"buy_this_app" | translate}}
+		</h2>
+	</div>
+	<ion-list lines="none">
+		<ion-item (click)="favorited()">
+			<div class="icon_box" slot="start">
+				<img src="assets/imgs/ic_settings.png">
+			</div>
+			<h2>{{'favorites' | translate}}</h2>
+		</ion-item>
+		<ion-item (click)="notification()">
+			<div class="icon_box" slot="start">
+				<img src="assets/imgs/ic_invite.png">
+			</div>
+			<h2>{{'notifications' | translate}}</h2>
+		</ion-item>
+		<ion-item (click)="help()">
+			<div class="icon_box" slot="start">
+				<img src="assets/imgs/ic_help.png">
+			</div>
+			<h2>{{'need_help' | translate}}</h2>
+		</ion-item>
+		<ion-item>
+			<div class="icon_box" slot="start">
+				<img src="assets/imgs/ic_rate.png">
+			</div>
+			<h2>{{'rate_us' | translate}}</h2>
+		</ion-item>
+		<ion-item (click)="condition()">
+			<div class="icon_box" slot="start">
+				<img src="assets/imgs/ic_guideline.png">
+			</div>
+			<h2>{{'terms_conditions' | translate}}</h2>
+		</ion-item>
+
+		<ion-item (click)="change_language()">
+			<div class="icon_box" slot="start">
+				<img src="assets/imgs/ic_language.png">
+			</div>
+			<h2>{{'select_languge' | translate}}</h2>
+		</ion-item>
+
+	</ion-list>
+</ion-content>

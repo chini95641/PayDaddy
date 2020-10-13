@@ -1,0 +1,55 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+				<ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'phone_recharge' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="form">
+		<ion-list lines="none">
+			<ion-item lines="none" class="toggle_box">
+				<div class="item_inner d-flex">
+					<p class="ion-text-end">{{'prepaid' | translate}}</p>
+					<ion-toggle mode="md" checked></ion-toggle>
+					<p class="ion-text-start">{{'postpaid' | translate}}</p>
+				</div>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-input type="text" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
+				<ion-icon class="zmdi zmdi-account-box" slot="end"></ion-icon>
+			</ion-item>
+			<ion-item lines="none" > 
+				<ion-select mode="md" interface="action-sheet" placeholder="{{'select_operator' | translate}}">
+					<ion-select-option value="idea">Idea</ion-select-option>
+					<ion-select-option value="vodafone">Vodafone </ion-select-option>
+					<ion-select-option value="airtel">Airtel</ion-select-option>
+					<ion-select-option value="jio">Jio</ion-select-option>
+				</ion-select>
+			</ion-item>
+			
+			<ion-item lines="none">
+				<ion-input type="text" placeholder="{{'amount' | translate}}"></ion-input>
+				<h4  slot="end">{{'see_plans' | translate}}</h4>
+			</ion-item>
+			<ion-item class="promocode" lines="none" (click)="promocode()">
+				<h2>{{'have_promocode' | translate}}</h2>
+			</ion-item>
+		</ion-list> 
+		
+		<ion-button size="large" shape="block" class="btn">{{'pay_via_quickpay' | translate}}</ion-button>
+	</div>
+
+	<div class="banner">
+		<div class="banner_img">
+			<img src="assets/imgs/banner3.png">
+		</div>
+		<div class="banner_text ion-text-end">
+			<h3 class="ion-text-uppercase">Winter Sale</h3>
+			<h2>Flat 50% OFF</h2>
+			<h4 class="ion-text-uppercase">{{'shop_now' | translate}}</h4>
+		</div>
+	</div>
+</ion-content>

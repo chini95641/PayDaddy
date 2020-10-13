@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			<div class="d-flex">
+				<img src="assets/imgs/logo2.png">
+				<ion-icon class="zmdi zmdi-share end"></ion-icon>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center" fullscreen>
+	<div class="qr_code_box">
+		<h2>{{'scan_this_code_to_quickpay' | translate}}</h2>
+		<div class="qr_code">
+			<img src="assets/imgs/img_qrcode.png">
+		</div>
+		<h3>Samantha smith</h3>
+		<p>+ 987 654 3210</p>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-button size="large" fill="outline" shape="block" class="btn">
+		<span class="text_gradient">{{'download_qr_code' | translate}}</span></ion-button>
+</ion-footer>

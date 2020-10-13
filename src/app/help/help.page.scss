@@ -1,0 +1,40 @@
+ion-header ion-toolbar {
+	--background: var(--white) !important;
+
+ ion-title {
+		color: var(--text-black) !important;
+		font-size: 1.5rem !important;
+    font-weight: 500;
+	}
+}
+
+
+ion-list {
+	margin: 0;
+	margin-top: 10px;
+	background: var(--transparent) !important;
+	padding: 0;
+	padding-top: 20px;
+
+	ion-item {
+		padding: 16px 21px 16px 21px;
+		align-items: flex-start;
+		margin: 0 auto;
+		margin-bottom: 7px;
+		border-radius: 8.5px;
+		width: calc(100% - 0px);
+		--background: var(--transparent);
+		background: var(--white);
+		--inner-padding-end: 0px;
+		--inner-min-height: unset !important;
+		--min-height: unset !important;
+		--padding-start: 0;
+
+
+		h2 {
+			margin: 0;
+			font-size: 1.16rem;
+		}
+
+	}
+}

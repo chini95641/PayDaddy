@@ -1,0 +1,33 @@
+ .img_box {
+ 	width: 180px;
+ 	margin: 0 auto;
+ 	margin-top: 85px;
+ 	margin-bottom: 40px;
+ }
+
+ h2 {
+ 	margin: 0;
+ 	font-size: 1.4rem
+ }
+
+ p {
+ 	font-size: 1rem;
+ 	font-weight: 500;
+ 	margin-top: 32px;
+ }
+
+ ion-footer {
+ 	padding-bottom: 25px;
+
+ 	h2 {
+ 		font-size: 1.15rem;
+ 		color: var(--primary);
+ 		margin-bottom: 14px
+ 	}
+
+ 	h3 {
+ 		margin: 0;
+ 		color: var(--text-light);
+ 		font-size: 1.15rem;
+ 	}
+ }

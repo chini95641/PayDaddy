@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			<span class="d-flex">
+				{{'select_languge' | translate}}
+			</span>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+	<ion-list lines="none">
+		<ion-radio-group>
+			<ion-item *ngFor="let language of languages"
+				[ngClass]="(defaultLanguageCode == language.code) ? 'active':'' " (click)="onLanguageClick(language)">
+				<div class="item_inner d-flex">
+					<h2>{{language.name}}</h2>
+					<ion-radio class="end" value="{{language.code}}"></ion-radio>
+				</div>
+			</ion-item>
+		</ion-radio-group>
+	</ion-list>
+</ion-content>
+<ion-footer class="ion-no-border">
+	<ion-button size="large" shape="block" class="btn" (click)="languageConfirm()">
+		{{'save' | translate}}
+	</ion-button>
+</ion-footer>

@@ -1,0 +1,44 @@
+<ion-header class="bg-transparent">
+	<ion-toolbar>
+		<ion-title>
+			<div class="d-flex">
+				<span class="page_title">{{'sign_in' | translate}}</span>
+				<span class="end" (click)="tabs()">{{'skip' | translate}}</span>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+	<div class="banner center_img">
+		<img src="assets/imgs/banner1.png" class="crop_img">
+		<div class="logo">
+			<img src="assets/imgs/logo.png">
+		</div>
+	</div>
+	<div class="form">
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<div class="icon_box" slot="start">
+					<img src="assets/imgs/ic_phone.png">
+				</div>
+				<ion-input type="text" placeholder="{{'phone_number' | translate}}"></ion-input>
+			</ion-item>
+
+			<ion-item lines="none">
+				<div class="icon_box" slot="start">
+					<img src="assets/imgs/ic_password.png">
+				</div>
+				<ion-input type="password" placeholder="{{'password' | translate}}"></ion-input>
+				<h3 slot="end" (click)="forgotpassword()">{{'forgot' | translate}}</h3>
+			</ion-item>
+		</ion-list>
+		<ion-button size="large" shape="block" class="btn" (click)="tabs()">{{'sign_in' | translate}}</ion-button>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<p class="ion-text-center" no-margin>{{'not_registered_yet' | translate}}</p>
+	<ion-button size="large" fill="outline" shape="block" class="btn" (click)="register_now()">
+		<span class="text_gradient">{{'register_now' | translate}}</span></ion-button>
+</ion-footer>

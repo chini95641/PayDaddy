@@ -1,0 +1,33 @@
+ <ion-header>
+ 	<ion-toolbar>
+ 		<ion-buttons slot="start">
+ 			<ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+ 		</ion-buttons>
+ 		<!--        <ion-title></ion-title>-->
+ 	</ion-toolbar>
+ 	<div class="form">
+ 		<ion-list lines="none">
+ 			<ion-item lines="none">
+ 				<ion-input type="text" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
+ 				<h3 slot="end">
+ 					<ion-icon class="zmdi zmdi-account-box"></ion-icon>
+ 				</h3>
+ 			</ion-item>
+ 		</ion-list>
+ 	</div>
+ </ion-header>
+
+ <ion-content fullscreen>
+ 	<div class="qr_code_scanner_container">
+ 		<img src="assets/imgs/qr_scan.png" class="qr_scan">
+ 		<h2 class="ion-text-center">{{'scan_qr_code' | translate}}</h2>
+ 		<div class="scanner">
+ 			<div class="scan_line"></div>
+ 			<img src="assets/imgs/qr_code_scanner.png">
+ 		</div>
+ 	</div>
+ </ion-content>
+ <ion-footer class="ion-no-border ion-text-center">
+ 	<ion-icon class="zmdi zmdi-flash-off"></ion-icon>
+ 	<ion-icon class="zmdi zmdi-image"></ion-icon>
+ </ion-footer>
