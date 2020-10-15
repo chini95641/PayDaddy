@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import {MyEvent} from './../../services/myevent.services';
 
 @Component({
   selector: 'app-verification',
@@ -8,12 +9,29 @@ import { NavController } from '@ionic/angular';
 })
 export class VerificationPage implements OnInit {
 
-  constructor(private navCtrl: NavController) { }
+  windowRef:any;
+  verifCode:any;
+  constructor(public windowService : MyEvent,private navCtrl: NavController) { }
 
   ngOnInit() {
+    this.windowRef=this.windowService.windowRef;
   }
 
   tabs() {
     this.navCtrl.navigateRoot(['./tabs']);
   } 
+  
+  verifyCode(){
+    this.windowRef.confirmationResult.confirm(this.verifCode)
+    .then(async result=>{
+    console.log(result)
+    
+    this.navCtrl.navigateRoot(['./tabs']);
+     //If the result is successful...
+    })
+    .catch(err=>{
+     console.log('err2',err)
+    });
+ }
+
 }

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 	
 import { IonicModule } from '@ionic/angular';
+import { HttpModule } from '@angular/http';
 
 import { AccountPageRoutingModule } from './account-routing.module';
 
@@ -15,7 +16,8 @@ import { AccountPage } from './account.page';
     FormsModule,
     IonicModule,
     TranslateModule,
-    AccountPageRoutingModule
+    AccountPageRoutingModule,
+    HttpModule
   ],
   declarations: [AccountPage]
 })

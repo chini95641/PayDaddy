@@ -8,6 +8,10 @@ export class MyEvent {
     private selectedLanguage = new Subject<string>();
 
     constructor() { }
+    
+    get windowRef(){
+        return window;
+    }
 
     public getLanguageObservable(): Observable<string> {
         return this.selectedLanguage.asObservable();

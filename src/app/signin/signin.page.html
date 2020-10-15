@@ -22,23 +22,26 @@
 				<div class="icon_box" slot="start">
 					<img src="assets/imgs/ic_phone.png">
 				</div>
-				<ion-input type="text" placeholder="{{'phone_number' | translate}}"></ion-input>
+				<ion-input [(ngModel)]="line" placeholder="+123456789" type="tel"></ion-input>
 			</ion-item>
 
-			<ion-item lines="none">
+			<!-- <ion-item lines="none">
 				<div class="icon_box" slot="start">
 					<img src="assets/imgs/ic_password.png">
 				</div>
 				<ion-input type="password" placeholder="{{'password' | translate}}"></ion-input>
 				<h3 slot="end" (click)="forgotpassword()">{{'forgot' | translate}}</h3>
-			</ion-item>
-		</ion-list>
-		<ion-button size="large" shape="block" class="btn" (click)="tabs()">{{'sign_in' | translate}}</ion-button>
+			</ion-item> -->
+		</ion-list><br/>
+		<div class='ion-center' style="position:relative;z-index:10;width:100%;margin-left:2em;margin-right:auto;">
+			<div id="recaptcha-container"></div>
+		</div>
+		<ion-button size="large" shape="block" class="btn"  (click)="sendLoginCode()">{{'sign_in' | translate}}</ion-button>
 	</div>
 </ion-content>
 
-<ion-footer class="ion-no-border">
+<!-- <ion-footer class="ion-no-border">
 	<p class="ion-text-center" no-margin>{{'not_registered_yet' | translate}}</p>
 	<ion-button size="large" fill="outline" shape="block" class="btn" (click)="register_now()">
 		<span class="text_gradient">{{'register_now' | translate}}</span></ion-button>
-</ion-footer>
+</ion-footer> -->
