@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('./categories/categories.module').then( m => m.CategoriesPageModule)
   },
   {
+    path: 'getBookingDetail',
+    loadChildren: () => import('./getbookingdetail/getbookingdetail.module').then( m => m.GetBookingDetailPageModule)
+  },
+  {
     path: 'favorited',
     loadChildren: () => import('./favorited/favorited.module').then( m => m.FavoritedPageModule)
   },
@@ -44,6 +48,18 @@ const routes: Routes = [
     loadChildren: () => import('./item-info/item-info.module').then( m => m.ItemInfoPageModule)
   },
   {
+    path: 'payment',
+    loadChildren: () => import('./payment/payment.module').then( m => m.PaymentPageModule)
+  },
+  {
+    path: 'booking',
+    loadChildren: () => import('./booking/booking.module').then( m => m.BookingPageModule)
+  },
+  {
+    path: 'fare-rule',
+    loadChildren: () => import('./farerule/farerule.module').then( m => m.FareRulePageModule)
+  },
+  {
     path: 'item-list',
     loadChildren: () => import('./item-list/item-list.module').then( m => m.ItemListPageModule)
   },
@@ -54,6 +70,10 @@ const routes: Routes = [
   {
     path: 'my-orders',
     loadChildren: () => import('./my-orders/my-orders.module').then( m => m.MyOrdersPageModule)
+  },
+  {
+    path: 'flightsearchresults',
+    loadChildren: () => import('./flightsearchresults/flightsearchresults.module').then( m => m.FlightSearchResultsPageModule)
   },
   {
     path: 'myprofile',

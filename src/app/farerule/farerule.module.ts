@@ -2,22 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-  
+
 import { IonicModule } from '@ionic/angular';
 
-import { NotificationPageRoutingModule } from './notification-routing.module';
+import { FareRulePageRoutingModule } from './farerule-routing.module';
 
-import { NotificationPage } from './notification.page';
+import { FareRulePage } from './farerule.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TranslateModule,
-    NotificationPageRoutingModule
+    TranslateModule,   
+    FareRulePageRoutingModule
   ],
-  declarations: [NotificationPage], 
-  entryComponents: [NotificationPage]
+  declarations: [FareRulePage], 
+  entryComponents: [FareRulePage]
 })
-export class NotificationPageModule {}
+export class FareRulePageModule {}
+ 

@@ -99,7 +99,7 @@
   					font-size: 1.1rem !important;
   					letter-spacing: 0.0px;
   					font-weight: 500 !important;
-
+					color: black;
   				}
   			}
 
@@ -236,3 +236,13 @@
   		font-size: 1.1rem;
   	}
   }
+
+  p {
+	  color:black;
+  }
+
+  .searchbarinput {
+    input{
+       color:black !important; 
+    }
+}

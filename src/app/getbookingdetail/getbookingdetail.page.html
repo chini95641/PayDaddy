@@ -1,0 +1,94 @@
+ <ion-header>
+ 	<ion-toolbar>
+ 		<ion-buttons slot="start">
+ 				<ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+ 		</ion-buttons>
+ 		<ion-title>
+ 			<span class="d-flex">
+ 				{{'View Booking Detail' | translate}}
+ 			</span>
+ 		</ion-title>
+ 	</ion-toolbar>
+ </ion-header>
+
+
+ <ion-content class="bg_color" fullscreen>
+ 	<ion-list lines="none">
+		<ion-item>
+			<div class="item_inner">
+				<h2 class="d-flex blackfont"><span>Booking Summary</span>
+					
+				</h2>
+				<p>{{bookingtitle}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  (Booked by {{byuser}})<br/>Booking Date: {{bookingdate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Travel Date: {{traveldate}}</p>
+			</div>
+		</ion-item>
+ 		<ion-item>
+ 			<div class="item_inner">
+ 				<h2 class="d-flex blackfont"><span>Flight Details</span>
+				 </h2>
+ 				<p>{{flightdate}} </p>
+ 				<p>{{place}} </p>
+ 				<p>{{status}} </p>
+ 			</div>
+ 		</ion-item>
+
+ 		<ion-item>
+ 			<div class="item_inner">
+ 				<h2 class="d-flex blackfont"><span>Fare Rules</span>
+ 				</h2>
+ 				<p>{{flightroute}}</p>
+ 				<p>{{cabinclass}}</p>
+ 				<p>{{fareruledetail}}</p>
+ 			</div>
+ 		</ion-item>
+
+ 		<ion-item>
+ 			<div class="item_inner">
+ 				<h2 class="d-flex blackfont"><span>Fare Type</span>
+ 				</h2>
+ 				<p>{{faretype}}</p>
+ 			</div>
+ 		</ion-item>
+
+ 		<ion-item>
+ 			<div class="item_inner">
+ 				<h2 class="d-flex blackfont"><span>Sales Summary</span>
+ 				</h2>
+ 				<p>{{BaseFare}}</p>
+ 				<p>{{Tax}}</p>
+ 				<p>{{offeredFare}}</p>
+ 				<p>{{commission}}</p>
+ 			</div>
+ 		</ion-item>
+
+ 		<ion-item>
+ 			<div class="item_inner">
+ 				<h2 class="d-flex blackfont"><span>Passenger Details</span>
+ 					
+ 				</h2>
+ 				<p *ngFor="let pass of passenger">
+					 {{pass.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{pass.type}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{pass.birthday}}
+				</p>
+ 			</div>
+ 		</ion-item>
+
+ 		<!-- <ion-item>
+ 			<div class="item_inner">
+ 				<h2 class="d-flex blackfont"><span>SSR Information</span>
+ 					
+ 				</h2>
+ 				<p>2 days ago</p>
+ 			</div>
+ 		</ion-item>
+
+ 		<ion-item>
+ 			<div class="item_inner">
+ 				<h2 class="d-flex blackfont"><span>Booking History</span>
+ 					
+ 				</h2>
+ 				<p>2 days ago</p>
+ 			</div>
+ 		</ion-item> -->
+
+ 	</ion-list>
+ </ion-content>

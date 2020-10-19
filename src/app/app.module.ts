@@ -5,6 +5,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { NetworkInterface } from '@ionic-native/network-interface/ngx';
 
 import { PromocodePageModule } from './promocode/promocode.module';
 import * as firebase from 'firebase';
@@ -48,6 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   providers: [
+    NetworkInterface,
     StatusBar,
     SplashScreen,
     { provide: APP_CONFIG, useValue: BaseAppConfig },

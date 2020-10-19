@@ -5,9 +5,9 @@ import { TranslateModule } from '@ngx-translate/core';
   
 import { IonicModule } from '@ionic/angular';
 
-import { NotificationPageRoutingModule } from './notification-routing.module';
+import { GetBookingDetailPageRoutingModule } from './getbookingdetail-routing.module';
 
-import { NotificationPage } from './notification.page';
+import { GetBookingDetailPage } from './getbookingdetail.page';
 
 @NgModule({
   imports: [
@@ -15,9 +15,9 @@ import { NotificationPage } from './notification.page';
     FormsModule,
     IonicModule,
     TranslateModule,
-    NotificationPageRoutingModule
+    GetBookingDetailPageRoutingModule
   ],
-  declarations: [NotificationPage], 
-  entryComponents: [NotificationPage]
+  declarations: [GetBookingDetailPage], 
+  entryComponents: [GetBookingDetailPage]
 })
-export class NotificationPageModule {}
+export class GetBookingDetailPageModule {}

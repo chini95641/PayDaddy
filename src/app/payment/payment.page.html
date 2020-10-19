@@ -1,0 +1,27 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'Payment' | translate}}</ion-title>
+	</ion-toolbar>
+
+	<div class="form">
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<ion-input type="text" placeholder="{{'enter_amount' | translate}}"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-input type="text" placeholder="{{'card_number' | translate}}"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-input type="text" placeholder="{{'enter_vcc' | translate}}"></ion-input>
+			</ion-item>
+			<ion-button size="large" shape="block" (click)="paymentsuccess()" class="btn">{{'Pay Money' | translate}}</ion-button>
+			<h2 class="ion-text-center">{{'Total_pay_balance' | translate}}   ₹ {{totalpay}}</h2>
+		</ion-list>
+	</div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+</ion-content>

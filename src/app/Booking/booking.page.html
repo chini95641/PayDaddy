@@ -1,0 +1,186 @@
+<ion-header class="bg-transparent">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{'Booking' | translate}}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+	<div class="banner center_img">
+		<ion-slides pager autoplay=3000>
+			<ion-slide>
+				<div class="img_box center_img">
+					<img src="assets/imgs/banner1.png" class="crop_img">
+				</div>
+				<div class="text">
+					<p>Insert <br>Agree paying & booking info</p>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="img_box center_img">
+					<img src="assets/imgs/banner2.png" class="crop_img">
+				</div>
+				<div class="text">
+					<p>Insert <br>Agree paying & booking info</p>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="img_box center_img">
+					<img src="assets/imgs/banner1.png" class="crop_img">
+				</div>
+				<div class="text">
+					<p>Insert <br>Agree paying & booking info</p>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="img_box center_img">
+					<img src="assets/imgs/banner2.png" class="crop_img">
+				</div>
+				<div class="text">
+					<p>Insert <br>Agree paying & booking info</p>
+				</div>
+			</ion-slide>
+		</ion-slides>
+	</div>
+	<div class="form">
+		<ion-list lines="none">
+			<ion-radio-group value="Mr" [(ngModel)] = "type">
+				<ion-list-header>
+				  <ion-label class="radiotitle">Type</ion-label>
+				</ion-list-header>
+				<ion-item class="thin">
+				  <ion-label class="thinlabel">Mr</ion-label>
+				  <ion-radio slot="start" color="success" value="Mr"></ion-radio>
+				</ion-item>
+	  
+				<ion-item class="thin">
+				  <ion-label class="thinlabel">Ms</ion-label>
+				  <ion-radio slot="start" color="tertiary" value="Ms"></ion-radio>
+				</ion-item>
+	  
+				<ion-item class="thin">
+				  <ion-label class="thinlabel">Mrs</ion-label>
+				  <ion-radio slot="start" color="danger" value="Mrs"></ion-radio>
+				</ion-item>
+			  </ion-radio-group>
+			  <ion-grid>
+				  <ion-row>
+					  <ion-col>
+						<ion-item lines="none">
+							<div class="icon_box" slot="start">
+								<img src="assets/imgs/ic_person.png">
+							</div>
+							<ion-input type="text" [(ngModel)]="firstname" placeholder="{{'First NAME' | translate}}"></ion-input>
+						</ion-item>
+					  </ion-col>
+					  <ion-col>
+						<ion-item lines="none">
+							<div class="icon_box" slot="start">
+								<img src="assets/imgs/ic_person.png">
+							</div>
+							<ion-input type="text" [(ngModel)]="lastname" placeholder="{{'Last Name' | translate}}"></ion-input>
+						</ion-item>
+					  </ion-col>
+				  </ion-row>
+				  <ion-row>
+					<ion-col size="6">
+						<ion-item class="thin" lines="none">
+							<div class="icon_box medium" slot="start">
+								<img src="assets/imgs/ic_guideline.png">
+							</div>			
+							<ion-datetime class="date" [(ngModel)]="birthday" mode="md" displayFormat="DD MMM YYYY " placeholder="{{'Birthday' | translate}}"></ion-datetime>
+						</ion-item>
+					</ion-col>
+					<ion-col size="6">
+						<ion-item class="thingender" lines="none">
+							<ion-select [(ngModel)]="gender" style="color: black" mode="md" interface="action-sheet" placeholder="Gender">
+								<ion-select-option value="1">Male</ion-select-option>
+								<ion-select-option value="2">Female</ion-select-option>
+							</ion-select>
+						</ion-item>
+					</ion-col>
+				  </ion-row>
+				  <ion-row>
+					<ion-col size="6">
+						<ion-item class="thinno" lines="none">
+							<div class="icon_box" slot="start">
+								<img src="assets/imgs/ic_password.png">
+							</div>
+							<ion-input type="text" [(ngModel)]="passport" placeholder="{{'PassPortNo' | translate}}"></ion-input>
+						</ion-item>
+					</ion-col>
+					<ion-col size="6">
+						<ion-item class="thin" lines="none">
+							<div class="icon_box medium" slot="start">
+								<img src="assets/imgs/ic_guideline.png">
+							</div>			
+							<ion-datetime class="date" [(ngModel)]="expiry" mode="md" displayFormat="DD MMM YYYY " placeholder="{{'passport_expiry' | translate}}"></ion-datetime>
+						</ion-item>
+					</ion-col>
+				  </ion-row>
+				  <ion-row>
+					<ion-col>
+					  <ion-item lines="none">
+						  <div class="icon_box" slot="start">
+							  <img src="assets/imgs/ic_home.png">
+						  </div>
+						  <ion-input type="text" [(ngModel)]="addressline1" placeholder="{{'Addressline1' | translate}}"></ion-input>
+					  </ion-item>
+					</ion-col>
+					<ion-col>
+					  <ion-item lines="none">
+						  <div class="icon_box" slot="start">
+							  <img src="assets/imgs/ic_home.png">
+						  </div>
+						  <ion-input type="text" [(ngModel)]="addressline2" placeholder="{{'Addressline2' | translate}}"></ion-input>
+					  </ion-item>
+					</ion-col>
+				  </ion-row>
+				  <ion-row>
+					<ion-col>
+					  <ion-item lines="none">
+						  <div class="icon_box" slot="start">
+							  <img src="assets/imgs/ic_help.png">
+						  </div>
+						  <ion-input type="text" [(ngModel)]="country" placeholder="{{'Country' | translate}}"></ion-input>
+					  </ion-item>
+					</ion-col>
+					<ion-col>
+					  <ion-item lines="none">
+						  <div class="icon_box" slot="start">
+							  <img src="assets/imgs/ic_help.png">
+						  </div>
+						  <ion-input type="text" [(ngModel)]="city" placeholder="{{'City' | translate}}"></ion-input>
+					  </ion-item>
+					</ion-col>
+				  </ion-row>
+				  <ion-row>
+					<ion-col>
+					  <ion-item lines="none">
+						  <div class="icon_box" slot="start">
+							  <img src="assets/imgs/ic_phone.png">
+						  </div>
+						  <ion-input type="text" [(ngModel)]="contactno" placeholder="{{'Contactno' | translate}}"></ion-input>
+					  </ion-item>
+					</ion-col>
+					<ion-col>
+					  <ion-item lines="none">
+						  <div class="icon_box" slot="start">
+							  <img src="assets/imgs/ic_email.png">
+						  </div>
+						  <ion-input type="text" [(ngModel)]="email" placeholder="{{'Email' | translate}}"></ion-input>
+					  </ion-item>
+					</ion-col>
+				  </ion-row>
+			  </ion-grid>
+		</ion-list>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-button size="large" shape="block" class="btn" (click)="continue()">{{'Continue' | translate}}</ion-button>
+</ion-footer>

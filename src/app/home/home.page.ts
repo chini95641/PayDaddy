@@ -29,7 +29,7 @@ export class HomePage implements OnInit {
     this.route.navigate(['./phonerecharge']);
   }  
  book_ticket() {
-    this.route.navigate(['./book-ticket']);
+    this.route.navigate(['./signup']);
   } 
  transaction() {
     this.route.navigate(['./transaction']);

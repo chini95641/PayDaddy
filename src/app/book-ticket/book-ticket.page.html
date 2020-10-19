@@ -98,38 +98,55 @@
 				<ion-item class="toggle_box">
 					<div class="item_inner d-flex ">
 						<p class="ion-text-end">{{'one_way' | translate}}</p>
-						<ion-toggle mode="md" checked></ion-toggle>
+						<ion-toggle mode="md" [(ngModel)]="travelway" checked></ion-toggle>
 						<p class="ion-text-start">{{'round_trip' | translate}}</p>
 					</div>
 				</ion-item>
 
-				<ion-item lines="none">
-					<ion-label position="fixed">{{'from' | translate}}</ion-label>
-					<ion-select class="ion-text-end" mode="md" interface="action-sheet" placeholder="">
-						<ion-select-option value="idea">New York (JFK)</ion-select-option>
-						<ion-select-option value="vodafone">Toronto (YTZ) </ion-select-option>
-					</ion-select>
-				</ion-item>
-				<ion-item lines="none">
-					<ion-label position="fixed">{{'to' | translate}}</ion-label>
-					<ion-select class="ion-text-end" mode="md" interface="action-sheet" placeholder="">
-						<ion-select-option value="idea">New York (JFK)</ion-select-option>
-						<ion-select-option value="vodafone">Toronto (YTZ) </ion-select-option>
-					</ion-select>
-				</ion-item>
+				<ion-label position="fixed">{{'from' | translate}}</ion-label>
+				<ion-searchbar color="white"
+					[(ngModel)]="searchbar"
+					placeholder="Filter leave airport"
+					showcancelbutton=""
+					(ionInput)="filterList($event)"
+				></ion-searchbar>
+
+				<ion-list *ngIf="listview == true" lines="none">
+					<ion-item *ngFor="let airport of airportList">
+						<ion-label class="ion-text-wrap">
+							<p (click)="selectResult(airport.CityName,airport.CityCode)">{{ airport.CityCode }} -- {{ airport.CityName }} -- {{airport.AirportName}}</p>
+						</ion-label>
+					</ion-item>
+				</ion-list>
+
+				<ion-label position="fixed">{{'to' | translate}}</ion-label>
+				<ion-searchbar color="white"
+					[(ngModel)]="searchbarto"
+					placeholder="Filter arrive airport"
+					showcancelbutton=""
+					(ionInput)="filterListto($event)"
+				></ion-searchbar>
+
+				<ion-list *ngIf="listviewto == true" lines="none">
+					<ion-item *ngFor="let airportto of airportListto">
+						<ion-label class="ion-text-wrap">
+							<p (click)="selectResultto(airportto.CityName,airportto.CityCode)">{{ airportto.CityCode }} -- {{ airportto.CityName }} -- {{airportto.AirportName}}</p>
+						</ion-label>
+					</ion-item>
+				</ion-list>
 
 				<ion-row class="datetime_row">
 					<ion-col size="6">
 						<ion-item lines="none">
 							<ion-icon class="zmdi zmdi-calendar-alt ion-text-start" slot="start"></ion-icon>
-							<ion-datetime mode="md" displayFormat="DD MMM YYYY " placeholder="{{'depart_date' | translate}}"></ion-datetime>
+							<ion-datetime [(ngModel)]="startdate" mode="md" displayFormat="DD MMM YYYY " placeholder="{{'depart_date' | translate}}"></ion-datetime>
 						</ion-item>
 					</ion-col>
 
 					<ion-col size="6">
 						<ion-item lines="none">
 							<ion-icon class="zmdi zmdi-calendar-alt ion-text-start" slot="start"></ion-icon>
-							<ion-datetime mode="md" displayFormat="DD MMM YYYY " placeholder="{{'return_date' | translate}}"></ion-datetime>
+							<ion-datetime mode="md" [(ngModel)]="enddate" displayFormat="DD MMM YYYY " placeholder="{{'return_date' | translate}}"></ion-datetime>
 						</ion-item>
 					</ion-col>
 				</ion-row>
@@ -137,26 +154,26 @@
 				<ion-row class="input_row">
 					<ion-col size="4">
 						<ion-item lines="none">
-							<ion-input type="text" placeholder="{{'abult' | translate}}"></ion-input>
+							<ion-input type="text" [(ngModel)]="adult" placeholder="{{'abult' | translate}}"></ion-input>
 						</ion-item>
 					</ion-col>
 					<ion-col size="4">
 						<ion-item lines="none">
-							<ion-input type="text" placeholder="{{'child' | translate}}"></ion-input>
+							<ion-input type="text" [(ngModel)]="child" placeholder="{{'child' | translate}}"></ion-input>
 						</ion-item>
 					</ion-col>
 					<ion-col size="4">
 						<ion-item lines="none">
-							<ion-input type="text" placeholder="{{'infant' | translate}}"></ion-input>
+							<ion-input type="text" [(ngModel)]="infant" placeholder="{{'infant' | translate}}"></ion-input>
 						</ion-item>
 					</ion-col>
 				</ion-row>
 
 				<ion-item>
 					<ion-label position="fixed">{{'class' | translate}}</ion-label>
-					<ion-select class="ion-text-end" mode="md" interface="action-sheet" placeholder="">
-						<ion-select-option value="idea">Business</ion-select-option>
-						<ion-select-option value="vodafone">Economy</ion-select-option>
+					<ion-select [(ngModel)]="class" class="ion-text-end" mode="md" interface="action-sheet" placeholder="">
+						<ion-select-option value="2">Business</ion-select-option>
+						<ion-select-option value="4">Economy</ion-select-option>
 					</ion-select>
 				</ion-item>
 			</ion-list>
@@ -247,7 +264,7 @@
 </ion-content>
 
 <ion-footer class="ion-no-border">
-	<ion-button size="large" shape="block" class="btn" *ngIf="book_ticket == 'train_ticket'" (click)="paymentsuccessful()">{{'search_trains' | translate}}</ion-button>
-	<ion-button size="large" shape="block" class="btn" *ngIf="book_ticket == 'flights'" (click)="paymentsuccessful()">{{'search_flights' | translate}}</ion-button>
-	<ion-button size="large" shape="block" class="btn" *ngIf="book_ticket == 'bus'" (click)="paymentsuccessful()">{{'search_buses' | translate}}</ion-button>
+	<ion-button size="large" shape="block" class="btn" *ngIf="book_ticket == 'train_ticket'" (click)="Searchresult()">{{'search_trains' | translate}}</ion-button>
+	<ion-button size="large" shape="block" class="btn" *ngIf="book_ticket == 'flights'" (click)="Searchresult()">{{'search_flights' | translate}}</ion-button>
+	<ion-button size="large" shape="block" class="btn" *ngIf="book_ticket == 'bus'" (click)="Searchresult()">{{'search_buses' | translate}}</ion-button>
 </ion-footer>

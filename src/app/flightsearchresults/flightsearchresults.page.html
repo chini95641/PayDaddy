@@ -1,0 +1,41 @@
+<ion-header class="header_bg bg-transparent">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			<div class="d-flex">
+				{{'FlightSearch Results' | translate}}
+				<div class="icon_container end">
+					<span class="icon_box" (click)=search()><img src="assets/imgs/ic_search_wt.png"></span>
+				</div>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="tab_container" [ngSwitch]="order_tab">
+		<ion-list lines="none" *ngSwitchCase="'show'">
+			<ion-item *ngFor="let result of results">
+				<div class="item_inner">
+					<h2 class="d-flex">{{'Duration' | translate}}: {{result.duration}} <span class="end">₹ {{result.totalprice}}</span></h2>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{result.startdate}}&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp; {{result.enddate}}</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{result.startplace}}&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp; {{result.endplace}}</p>
+					<div class="order_details d-flex">
+						<div class="order_img">
+							<img src={{result.image}}>
+						</div>
+						<div class="order_text">
+							<h3>{{result.name}}</h3>
+							<p>{{result.flightnumber}}</p>
+						</div>
+						<div class="widthstyle">
+							<ion-button class="bookbutton" (click)="ToFairRule(result.resultIndex)" expand="block">Book</ion-button>
+						</div>
+					</div>
+				</div>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>

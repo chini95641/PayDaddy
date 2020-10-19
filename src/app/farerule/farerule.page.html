@@ -1,0 +1,99 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			<div class="d-flex">
+				<div class="icon_container end">
+				</div>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+	<div class="banner">
+		<ion-slides pager="true" loop="true">
+			<ion-slide>
+				<div class="img_box center_img">
+					<img src="assets/imgs/flight1.jpg">
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="img_box center_img">
+					<img src="assets/imgs/flight2.jpg">
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="img_box center_img">
+					<img src="assets/imgs/flight3.jpg">
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="img_box center_img">
+					<img src="assets/imgs/flight4.jpg">
+				</div>
+			</ion-slide>
+		</ion-slides>
+	</div>
+
+
+	<div class="form">
+		<ion-list lines="none">
+			<ion-item *ngFor="let result of results">
+				<div class="item_inner">
+					<div class="order_details d-flex">
+						<div class="order_img">
+							<img src={{result.image}}>&nbsp;&nbsp;&nbsp;
+						</div>
+						<div class="order_text">
+							<h3 class="blackfont">{{result.name}}</h3>
+							<p>{{result.flightnumber}}</p>
+						</div>
+					</div><br/>
+					<ion-grid>
+						<ion-row>
+							<ion-col>
+								<h2>{{result.startplace}}</h2><br/>
+								<h4 class="d-flex">{{result.starttime}}</h4>
+								<h4 class="d-flex">{{result.startdate}}</h4>
+								<h4 class="d-flex">{{result.startairportname}}, <br/> {{result.startplace}}</h4>
+							</ion-col>
+							<ion-col>
+								<p>{{result.duration}}</p>
+								<img src="../../assets/imgs/right1.png">
+							</ion-col>
+							<ion-col>
+								<h2>{{result.endplace}}</h2><br/>
+								<h4 class="d-flex">{{result.endtime}}</h4>
+								<h4 class="d-flex">{{result.enddate}}</h4>
+								<h4 class="d-flex">{{result.endairportname}}, <br/> {{result.endplace}}</h4>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+				</div>
+			</ion-item>
+			<ion-item>
+					<p>There is no Minimum Stay requirement.
+						There is no Maximum Stay requirement Adult Revalidation/Reissue Fare Component ZOWD Sector DEL-DXB Revalidation before/after departure, including failure to show at first/subsequent flight(s) : Not Allowed Reissue, including failure to show at first flight : Allowed with Restrictions Revalidation/Reissue request, including failure to show at first flight, must be made prior to 17OCT21  0000.
+						Prior to Departure of journey Reissue Penalty fee :  5500 INR(at today exchange rates 5500 INR)  Maximum reissue penalty fee for entire ticket (per reissue) :  5500 INR Failure to show at first flight Reissue Penalty fee :  11000 INR(at today exchange rates 11000 INR)  Maximum reissue penalty fee for entire ticket (per reissue) :  11000 INR After departure of journey Revalidation/Reissue request must be made prior to :  No restriction Failure to show at subsequent flight(s) Revalidation/Reissue request must be made prior to :  No restriction Refund Fare Component  ZOWD  Sector DEL-DXB Refund before/after departure, including failure to show at first/subsequent flight(s) :  Allowed with Restrictions Prior to Departure of journey Penalty fee :  5500 INR(at today exchange rates 5500 INR)  Maximum Refund penalty fee for entire ticket :  5500 INR Refund request must be made prior to :  No restriction Failure to show at first flight Penalty fee :  11000 INR(at today exchange rates 11000 INR)  Maximum Refund penalty fee for entire ticket :  11000 INR Refund request must be made prior to :  No restriction After departure of journey Penalty fee :  5500 INR(at today exchange rates 5500 INR)  Maximum Refund penalty fee for entire ticket :  5500 INR Refund request must be made prior to :  No restriction Failure to show at subsequent flight(s) Penalty fee :  11000 INR(at today exchange rates 11000 INR)  Maximum Refund penalty fee for entire ticket :  11000 INR Refund request must be made prior to :  No restriction * Revalidation is a modification of the original ticket without any reissue of a new ticket. * For Reissue, Penalty fees are in addition to any difference in fare. * For Refund, certain Taxes are non-refundable. RateClass : ZOW<br/>FareClass : ZOW marketing Company : KC Booking Class : Z Origin : DEL destination : DXB ruleSectionLocalId : 1 ruleCategoryCode : (50) RU.RULE APPLICATIONFARE BY RULEFROM/TO DELDROP NET  FARE FROM DEL APPLICATION   CLASS OF SERVICE     THESE FARES APPLY FOR BUSINESS/ECONOMY CLASS SERVICE.   TYPES OF TRANSPORTATION     THIS RULE GOVERNS ONE-WAY AND ROUND-TRIP FARES.     FARES GOVERNED BY THIS RULE CAN BE USED TO CREATE     ONE-WAY/ROUND-TRIP JOURNEYS. CAPACITY LIMITATIONS   THE CARRIER SHALL LIMIT THE NUMBER OF PASSENGERS CARRIED   ON ANY ONE FLIGHT AT FARES GOVERNED BY THIS RULE AND SUCH   FARES WILL NOT NECESSARILY BE AVAILABLE ON ALL FLIGHTS.   THE NUMBER OF SEATS WHICH THE CARRIER SHALL MAKE   AVAILABLE ON A GIVEN FLIGHT WILL BE DETERMINED BY THE   CARRIERS BEST JUDGMENT ruleSectionLocalId : 2 ruleCategoryCode : (7) MX.MAX STAYBASE FARE  TRAVEL FROM LAST STOPOVER MUST COMMENCE NO LATER THAN 6  MONTHS AFTER DEPARTURE FROM FARE ORIGIN. ruleSectionLocalId : 3 ruleCategoryCode : (15) SR.SALES RESTRICTFARE BY RULE  TICKETS MUST BE ISSUED ON/BEFORE 31DEC 20 AND MUST BE  ISSUED ON KC . ruleSectionLocalId : 4 ruleCategoryCode : (14) TR.TVL RESTRICTIONFARE BY RULE  VALID FOR TRAVEL COMMENCING ON/BEFORE 31DEC 20. ALL TRAVEL  MUST BE COMPLETED BY MIDNIGHT ON 31DEC 20. ruleSectionLocalId : 5 ruleCategoryCode : (5) AP.ADVANCE RES/TKTBASE FARE  WAITLIST AND STANDBY NOT PERMITTED.  OPEN RETURNS PERMITTED.         
+						NOTE -  ISSUANCE OF TICKETS WITH RQ OR HL STATUS IS NOT          PERMITTED.   
+						----  OPEN DATED TICKETS MAY BE ISSUED AS DEFINED IN          PARTICULAR FARES ONLY.
+						 ruleSectionLocalId : 6 ruleCategoryCode : (4) FL.FLT APPLICATIONFARE BY RULE  THE FARE COMPONENT MUST BE ON      ONE OR MORE OF THE FOLLOWING   ANY KC FLIGHT OPERATED BY KC. ruleSectionLocalId : 7
+						ruleCategoryCode : (19) CD.CHILD DISCOUNTSFARE BY RULE  ACCOMPANIED CHILD 2-11 - CHARGE 75 PERCENT OF THE FARE.        
+						TICKETING CODE - BASE FARE CODE PLUS CH25.    MUST BE ACCOMPANIED ON ALL FLIGHTS IN SAME COMPARTMENT      BY ADULT 18 OR OLDER.         NOTE -           PROOF OF AGE/AS EVIDENCE BY A PASSPORT ETC/MUST           BE PRESENTED AT THE TIME OF TICKETING COPY OF THE           APPROPRIATE DOCUMENT/PROOF OF AGE/MUST BE AFFIXED           TO THE AUDIT COUPON WHEN ANY DISCOUNT APPLIES          -----          MAY BE ACCOMPANIED ON ALL FLIGHTS IN SAME          COMPARTMENT BY FAMILY MEMBER OVER 16 YEARS.  OR - INFANT UNDER 2 WITHOUT A SEAT - CHARGE 10 PERCENT OF         THE FARE.             TICKETING CODE - BASE FARE CODE PLUS IN90.         MUST BE ACCOMPANIED ON ALL FLIGHTS IN SAME           COMPARTMENT BY ADULT 18 OR OLDER.         NOTE -           PROOF OF AGE/AS EVIDENCE BY A PASSPORT ETC/MUST           BE PRESENTED AT THE TIME OF TICKETING COPY OF THE           APPROPRIATE DOCUMENT/PROOF OF AGE/MUST BE AFFIXED           TO THE AUDIT COUPON WHEN ANY DISCOUNT APPLIES          -----          MAY BE ACCOMPANIED ON ALL FLIGHTS IN SAME          COMPARTMENT BY FAMILY MEMBER OVER 16 YEARS.  OR - INFANT UNDER 2 WITH A SEAT - CHARGE 75 PERCENT OF THE         FARE.             TICKETING CODE - BASE FARE CODE PLUS INS25.         MUST BE ACCOMPANIED ON ALL FLIGHTS IN SAME           COMPARTMENT BY ADULT 18 OR OLDER.         NOTE -           PROOF OF AGE/AS EVIDENCE BY A PASSPORT ETC/MUST           BE PRESENTED AT THE TIME OF TICKETING COPY OF THE           APPROPRIATE DOCUMENT/PROOF OF AGE/MUST BE AFFIXED           TO THE AUDIT COUPON WHEN ANY DISCOUNT APPLIES           ----           UNACCOMPANIED INFANT - NOT PERMITTED.ruleSectionLocalId : 8ruleCategoryCode : (8)SO.STOPOVERSBASE FARE  UNLIMITED STOPOVERS PERMITTED ON THE PRICING UNIT.ruleSectionLocalId : 9ruleCategoryCode : (9)TF.TRANSFERS/RTGSBASE FARE  UNLIMITED TRANSFERS PERMITTED ON THE PRICING UNIT    FARE BREAK SURFACE SECTORS NOT PERMITTED AND EMBEDDED     SURFACE SECTORS PERMITTED ON THE FARE COMPONENT.ruleSectionLocalId : 10ruleCategoryCode : (18)TE.TKT ENDORSEMENTBASE FARE  THE ORIGINAL AND THE REISSUED TICKET MUST BE ANNOTATED -  NONENDO/REB FEE/ - AND - REF FEE - IN THE ENDORSEMENT BOX.ruleSectionLocalId : 11ruleCategoryCode : (16)PE.PENALTIESBASE FARE  CHANGES    ANY TIME      CHARGE USD 75.00 FOR REISSUE/REVALIDATION.      CHILD/INFANT DISCOUNTS APPLY.      WAIVED FOR DEATH OF PASSENGER.      CHARGE USD 75.00 FOR NO-SHOW.      CHILD/INFANT DISCOUNTS APPLY.      WAIVED FOR DEATH OF PASSENGER.         NOTE -          CHARGE IS APPLIED FOR EACH CHANGED FARE COMPONENT          ------------------------          REROUTING IS PERMITTED IF COUNTRY OF ORIGINAL AND          COUNTRY OF DESTINATIONAL ARE KEPT THE SAME          WITHOUT CHANGES.          BEFORE DEPARTURE / FOR COMPLETELY UNUSED TICKET -          WHEN ITINERARY CHANGE RESULTS IN HIGHER FARE          THE DIFFERENCE SHOULD BE COLLECTED.          WHEN ITINERARY CHANGE RESULTS IN LOWER FARE REFUND          OF THE DIFFERENCE SHOULD BE MADE.          AFTER DEPARTURE / FOR PARTLY USED TICKET -          WHEN ITINERARY CHANGE RESULTS IN HIGHER FARE          THE DIFFERENCE SHOULD BE COLLECTED.          WHEN ITINERARY CHANGE RESULTS IN LOWER FARE NO          REFUND WILL BE MADE.          ----          REISSUE IS ANY CHANGES REQUIRED TO ISSUE ANOTHER          TICKET. REVALIDATION IS CHANGES NOT REQUIRED          TO ISSUE OTHER TICKET.          ----          UPGRADING - AT ANY TIME WITHIN TICKET VALIDITY.          ----          IN CASE OF UPGRADING THE DIFFERENCE BETWEEN NEW          FARE AND THE FARE PAID SHOULD BE COLLECTED.          ANY OTHER CHARGES FOR REISSUE SHOULD BE COLLECTED          ADDITIONALLY.          ----          FOR REISSUED TICKET WITH UPGRADE          FARE RULES APPLIES BY NEW REISSUED TICKET          FOR REISSUE/REVALIDATION          ----          ALL CONDITIONS OF NEW FARES MUST BE MET INCLUDING          CORRECT BOOKING CODE.          ----          WHEN END-ON-END COMBINATION THE PENALTY CHARGE          FOR EACH PRICING UNIT APPLIES SEPARATELY.          ----          IF ANY OF THE COUPONS IS NOT USED IN THE SEQUENCE          SHOWN ON THE TICKET CHANGES OF UNUSED SEGMENTS IS          NOT PERMITTED.          ----          FAMILY MEMBER- SPOUSE/ CHILDREN INCLUDING ADOPTED/          PARENTS/ BROTHERS/ SISTERS/ GRANDPARENTS/          GRANDCHILDREN/ FATHER-IN-LAW/ MOTHER-IN-LAW/          BROTHERS-IN-LAW/ SISTERS-IN-LAW/ SONS-IN-LAW AND          DAUGHTERS-IN-LAW TRAVELLING WITH PASSENGER.  CANCELLATIONS    ANY TIME      CHARGE USD 75.00 FOR CANCEL/REFUND.      CHILD/INFANT DISCOUNTS APPLY.      WAIVED FOR DEATH OF PASSENGER.      CHARGE USD 75.00 FOR NO-SHOW.      CHILD/INFANT DISCOUNTS APPLY.      WAIVED FOR DEATH OF PASSENGER.         NOTE -          CHARGE IS APPLIED FOR EACH FARE COMPONENT          ------------------------------------------          IF THE OW FARE IS NOT IN THE SAME RBD THEN DEDUCT          THE OW FARE IN THE NEXT AVAILABLE HIGHER RBD.    ...</p>
+			</ion-item>
+			<ion-item>
+				<p><font class="otherfont">Fare BreakUp<br/><br/></font>Adults : {{adults}} &nbsp;&nbsp;&nbsp; Child : {{child}}<br/>{{'Total Base Fare' | translate}} :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ {{baseFare}}<br/>{{'Total Taxes' | translate}} :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ {{taxFare}}<br/></p>
+			</ion-item>
+			<h1 class="blackcolor">Total Fare :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ {{totalFare}}</h1>
+	 		<ion-button size="large" (click)="payment()" shape="block" disabled>{{'Proceed To Pay' | translate}}</ion-button>
+		</ion-list>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border d-flex">
+	 <ion-button size="large" shape="block" (click)="continue()" class="btn end">{{'Continue' | translate}}</ion-button>
+</ion-footer>

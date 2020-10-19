@@ -2,22 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-  
+ 
 import { IonicModule } from '@ionic/angular';
 
-import { NotificationPageRoutingModule } from './notification-routing.module';
+import { PaymentPageRoutingModule } from './payment-routing.module';
 
-import { NotificationPage } from './notification.page';
+import { PaymentPage } from './payment.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TranslateModule,
-    NotificationPageRoutingModule
+	TranslateModule,   
+    PaymentPageRoutingModule
   ],
-  declarations: [NotificationPage], 
-  entryComponents: [NotificationPage]
+  declarations: [PaymentPage], 
+  entryComponents: [PaymentPage]
 })
-export class NotificationPageModule {}
+export class PaymentPageModule {}
+ 
