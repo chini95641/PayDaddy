@@ -16,7 +16,7 @@ export class BookingPage implements OnInit {
   lastname: any;
   httpOptions: any = null;
   info: Observable<any>;
-  ipaddress: any;
+  ipaddress: any;   
   newdata: any;
   quotes: any;
   type: any;
@@ -32,6 +32,11 @@ export class BookingPage implements OnInit {
   email: any;
   token: any;
   traceId: any;
+  datas: any;
+  adults: any;
+  childs: any;
+  infants: any;
+
 
   constructor(public windowService : MyEvent, public toastCtrl: ToastController,private activatedRoute: ActivatedRoute, private route: Router, public httpClient: HttpClient){
     this.httpClient = httpClient;
@@ -50,13 +55,82 @@ export class BookingPage implements OnInit {
   }
   
   ngOnInit() {
-    this.quotes= this.activatedRoute.snapshot.paramMap.get("quotes");
-    this.token= this.activatedRoute.snapshot.paramMap.get("token");
+    this.datas = [];
+    this.childs = [];
+    this.adults = [];
+    this.infants = [];
+    this.quotes = this.activatedRoute.snapshot.paramMap.get("quotes");
+    this.token = this.activatedRoute.snapshot.paramMap.get("token");
+    this.datas = JSON.parse(this.quotes);
     this.traceId= this.activatedRoute.snapshot.paramMap.get("traceId");
     var json = 'http://www.ip-api.com/json';
     this.httpClient.get(json).subscribe(result => {
       this.newdata = result;
     });
+    this.load();
+  }
+
+  load() {
+    var adultnumber = this.datas.Response.Results.FareBreakdown[0].PassengerCount;
+    var childnumber = this.datas.Response.Results.FareBreakdown[1].PassengerCount;
+    var infantnumber = this.datas.Response.Results.FareBreakdown[2].PassengerCount;
+    for(let i=1; i++; i<=adultnumber)
+    {
+      var listData = {
+        email: "email" + i,
+        contactno: "contactno" + i,
+        birthday: "birthday" + i,
+        gender: "gender" + i,
+        addressline1: "addressline1" + i,
+        addressline2: "addressline2" + i,
+        country: "country" + i,
+        city: "city" + i,
+        expiry: "expiry" + i,
+        passport: "passport" + i,
+        firstname: "firstname" + i,
+        lastname: "lastname" + i,
+        type: "type" + i
+      }
+      this.adults.push(listData);
+    }
+    for(let i=1; i++; i<=childnumber)
+    {
+      var listData = {
+        email: "email" + i,
+        contactno: "contactno" + i,
+        birthday: "birthday" + i,
+        gender: "gender" + i,
+        addressline1: "addressline1" + i,
+        addressline2: "addressline2" + i,
+        country: "country" + i,
+        city: "city" + i,
+        expiry: "expiry" + i,
+        passport: "passport" + i,
+        firstname: "firstname" + i,
+        lastname: "lastname" + i,
+        type: "type" + i
+      }
+      this.childs.push(listData);
+    }
+    for(let i=1; i++; i<=infantnumber)
+    {
+      var listData = {
+        email: "email" + i,
+        contactno: "contactno" + i,
+        birthday: "birthday" + i,
+        gender: "gender" + i,
+        addressline1: "addressline1" + i,
+        addressline2: "addressline2" + i,
+        country: "country" + i,
+        city: "city" + i,
+        expiry: "expiry" + i,
+        passport: "passport" + i,
+        firstname: "firstname" + i,
+        lastname: "lastname" + i,
+        type: "type" + i
+      }
+      this.infants.push(listData);
+    }
   }
 
   continue() {

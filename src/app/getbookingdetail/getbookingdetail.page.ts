@@ -60,10 +60,10 @@ export class GetBookingDetailPage implements OnInit {
     this.PNR= this.activatedRoute.snapshot.paramMap.get("PNR");
     this.ticket = this.activatedRoute.snapshot.paramMap.get("ticket");
     this.isLcc = this.activatedRoute.snapshot.paramMap.get("isLcc");
-    this.datas = JSON.parse(this.ticket);
     console.log("datasmy",this.ipaddress,this.PNR,this.bookingId,this.isLcc)
     if(this.isLcc == "true")
     {
+      this.datas = JSON.parse(this.ticket);
       console.log("for get",this.datas)
       let api = "http://api.tektravels.com/BookingEngineService_Air/AirService.svc/rest/GetBookingDetails"
         let body = {
@@ -90,7 +90,7 @@ export class GetBookingDetailPage implements OnInit {
             this.flightdate = data.Response.FlightItinerary.InvoiceCreatedOn;
             this.place = data.Response.FlightItinerary.Origin + "-" + data.Response.FlightItinerary.Destination;
             this.status = data.Response.FlightItinerary.AirlineCode;
-            this.faretype = data.Response.FlightItinerary.FareRules[0].FareType;
+            this.faretype = data.Response.FlightItinerary.FareType;
             this.fareruledetail = data.Response.FlightItinerary.FareRules[0].FareRuleDetail;
             if(data.Response.FlightItinerary.Segments[0].CabinClass == "2")
             {
@@ -139,7 +139,7 @@ export class GetBookingDetailPage implements OnInit {
             this.flightdate = data.Response.FlightItinerary.InvoiceCreatedOn;
             this.place = data.Response.FlightItinerary.Origin + "-" + data.Response.FlightItinerary.Destination;
             this.status = data.Response.FlightItinerary.AirlineCode;
-            this.faretype = data.Response.FlightItinerary.FareRules[0].FareType;
+            this.faretype = data.Response.FlightItinerary.FareType;
             this.fareruledetail = data.Response.FlightItinerary.FareRules[0].FareRuleDetail;
             if(data.Response.FlightItinerary.Segments[0].CabinClass == "2")
             {

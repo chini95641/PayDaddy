@@ -99,6 +99,10 @@ favorite_icon = false;
       this.info1
       .subscribe(data => {
           console.log('my Quote: ', data);
+          if(data.Response.Error.ErrorCode == 2)
+          {
+            alert("Error from the Supplier, Please select another airplane")
+          }
           this.quotedata = data;
           this.baseFare = data.Response.Results.Fare.BaseFare;
           this.totalFare = data.Response.Results.Fare.OfferedFare;

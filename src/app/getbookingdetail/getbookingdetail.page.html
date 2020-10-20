@@ -19,7 +19,7 @@
 				<h2 class="d-flex blackfont"><span>Booking Summary</span>
 					
 				</h2>
-				<p>{{bookingtitle}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  (Booked by {{byuser}})<br/>Booking Date: {{bookingdate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Travel Date: {{traveldate}}</p>
+				<p>{{bookingtitle}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  (Booked by {{byuser}})<br/>Booking Date: {{bookingdate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/> Travel Date: {{traveldate}}</p>
 			</div>
 		</ion-item>
  		<ion-item>
@@ -27,18 +27,18 @@
  				<h2 class="d-flex blackfont"><span>Flight Details</span>
 				 </h2>
  				<p>{{flightdate}} </p>
- 				<p>{{place}} </p>
- 				<p>{{status}} </p>
+ 				<p>Route: {{place}} </p>
+ 				<p>Status: {{status}} </p>
  			</div>
  		</ion-item>
 
  		<ion-item>
  			<div class="item_inner">
  				<h2 class="d-flex blackfont"><span>Fare Rules</span>
- 				</h2>
- 				<p>{{flightroute}}</p>
- 				<p>{{cabinclass}}</p>
- 				<p>{{fareruledetail}}</p>
+ 				</h2><br/>
+ 				<p>Route: {{flightroute}}</p><br/>
+ 				<p>Purpose: {{cabinclass}}</p><br/>
+ 				<p>Detail: <br/>{{fareruledetail}}</p>
  			</div>
  		</ion-item>
 
@@ -46,7 +46,7 @@
  			<div class="item_inner">
  				<h2 class="d-flex blackfont"><span>Fare Type</span>
  				</h2>
- 				<p>{{faretype}}</p>
+ 				<p>FareType: {{faretype}}</p>
  			</div>
  		</ion-item>
 
@@ -54,22 +54,22 @@
  			<div class="item_inner">
  				<h2 class="d-flex blackfont"><span>Sales Summary</span>
  				</h2>
- 				<p>{{BaseFare}}</p>
- 				<p>{{Tax}}</p>
- 				<p>{{offeredFare}}</p>
- 				<p>{{commission}}</p>
+ 				<p>Fare: {{basefare}}</p>
+ 				<p>Tax: {{tax}}</p>
+ 				<p>Total Budget: {{offeredFare}}</p>
+ 				<p>TotalCommission: {{commission}}</p>
  			</div>
  		</ion-item>
 
  		<ion-item>
  			<div class="item_inner">
  				<h2 class="d-flex blackfont"><span>Passenger Details</span>
- 					
  				</h2>
  				<p *ngFor="let pass of passenger">
-					 {{pass.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{pass.type}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{pass.birthday}}
+					NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIRTHDAY<br/>
+					{{pass.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{pass.type}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{pass.birthday}}
 				</p>
- 			</div>
+			 </div>
  		</ion-item>
 
  		<!-- <ion-item>

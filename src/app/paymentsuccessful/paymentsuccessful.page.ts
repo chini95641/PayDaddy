@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import {ActivatedRoute} from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-paymentsuccessful',
@@ -13,7 +14,7 @@ export class PaymentsuccessfulPage implements OnInit {
 
   httpOptions: any = null;
   info: Observable<any>;
-  constructor(private navCtrl: NavController,private activatedRoute: ActivatedRoute, public httpClient: HttpClient) { 
+  constructor(private navCtrl: NavController, public loadingController: LoadingController,private activatedRoute: ActivatedRoute, public httpClient: HttpClient) { 
     this.httpClient = httpClient;
     var headers = new Headers();
     headers.append("Accept", 'application/json');
@@ -53,6 +54,7 @@ export class PaymentsuccessfulPage implements OnInit {
   } 
 
   getBookingdetail() {
+    this.presentLoading();
     console.log("ticket", this.activatedRoute.snapshot.paramMap.get("ticket"))
     if(this.status == "true")
     {
@@ -79,9 +81,20 @@ export class PaymentsuccessfulPage implements OnInit {
         .subscribe(data => {
             console.log('making ticket: ', data);
             // var myJSON = JSON.stringify(data.Response.Results[0]);
+            this.loadingController.dismiss('loading');
             this.navCtrl.navigateRoot(['./getBookingDetail',{isLcc: false, ticket: "", ip: this.ipaddress, token: this.token, bookingId: this.bookingId, PNR: this.PNR}]);
         })
     }
+  }
+
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Please wait...',
+      duration: 30000,
+      id: 'loading'
+    });
+    await loading.present();
   }
 
 }
